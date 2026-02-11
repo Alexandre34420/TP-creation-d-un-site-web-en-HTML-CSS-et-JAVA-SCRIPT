@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Green IT - Quiz</title>
+</head>
+<body>
+
+<header>
+    <a href="https://www.greenit.fr/">
+        <img src="../img/greenit.jpg" alt="GreenIT_img" width="300">
+    </a>
+
+    <nav>
+        <a href="./accueil.html">Accueil</a>
+        <a href="./GreenITSiteWeb.html">Green IT & sites Web</a>
+        <a href="./QuizGreenIT.html">Quiz Green IT</a>
+        <a href="./apropos.html">À propos</a>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Quiz sur la Green IT</h1>
+
+    <form method="post" name="Quiz" action="#" class="box" id="QuizId" onsubmit="return false">
+
+
+        <fieldset id="informations">
+
+            <legend>Vos informations</legend>
+
+            <p>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom">
+            </p>
+
+            <p>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom">
+            </p>
+
+            <p>
+                <label for="date_naissance">Date de naissance :</label>
+                <input type="date" id="date_naissance" name="date_naissance">
+            </p>
+
+            <p>
+                <label for="email">Adresse mail :</label>
+                <input type="email" id="email" name="email">
+            </p>
+
+            <p>
+                <label for="statut">Statut :</label>
+                <select id="statut" name="statut">
+                    <option value="">Choisissez un statut</option>
+                    <option value="etudiant">Étudiant</option>
+                    <option value="enseignant">Enseignant</option>
+                    <option value="professionnel">Professionnel</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </p>
+            <input type="button" value="Commencer le quiz" id="startQuiz" onclick="quizAlert()">
+        </fieldset>
+
+        <fieldset class="quiz">
+            <legend>Quiz sur la Green IT</legend>
+
+            <p>1. Qu'est-ce que la Green IT ?</p>
+            <p>
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    a. Une pratique visant à réduire l'impact environnemental des technologies de l'information.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    b. Un système de recyclage des anciens ordinateurs.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    c. Une méthode pour augmenter la consommation énergétique des serveurs.
+                </label>
+            </p>
+
+            <p>2. Quel est l'objectif principal de la Green IT ?</p>
+            <p>
+                <label>
+                    <input type="checkbox" name="q2_a" value="a">
+                    a. Réduire la consommation d'énergie.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="q2_b" value="b">
+                    b. Minimiser les déchets électroniques.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="q2_c" value="c">
+                    c. Optimiser les performances des appareils électroniques.
+                </label>
+            </p>
+
+            <p>3. Donnez un exemple de pratique Green IT :</p>
+            <p>
+                <input type="text" name="q3" size="60">
+            </p>
+            <p>
+                <button type="submit">Envoyer</button>
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Envoyer" class="quiz" onclick="submitQuiz()">
+
+    </form>
+
+<main class="box">
+    <table id="result">
+        <caption>Résultats du Quiz Green IT</caption>
+        <thead>
+            <tr>
+                <th>Essai</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</main>
+
+</main>
+
+<footer>
+    <p>Tous droits réservés.</p>
+    <a href="https://www.greenit.fr/">En savoir plus ?</a>
+</footer>
+
+</body>
+</html>
